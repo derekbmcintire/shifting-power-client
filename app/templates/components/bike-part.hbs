@@ -1,64 +1,84 @@
 <div class='bike-wrap'>
-  <div class='cables seat-tube-cables'
-  {{action 'cables' on='mouseEnter'}}
-  {{action 'resetMessage' on='mouseLeave'}}></div>
-  <div class='cables top-cables'
-  {{action 'cables' on='mouseEnter'}}
-  {{action 'resetMessage' on='mouseLeave'}}></div>
+<div class='cables seat-tube-cables'
+    {{action 'cables' on='mouseEnter'}}
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'cablesVideo'}}></div>
+<div class='cables top-cables'
+    {{action 'cables' on='mouseEnter'}}
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'cablesVideo'}}></div>
 <div class='brakes levers' id='levers'
     {{action 'levers' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'brakesVideo'}}></div>
 <div class='shifting paddles' id='paddles'
     {{action 'paddles' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'shiftingVideo'}}></div>
 <div class='bearings headset' id='headset'
     {{action 'headset' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'headsetVideo'}}></div>
 <div class='bearings bb' id='bb'
     {{action 'bottomBracket' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'bbVideo'}}></div>
 <div class='brakes rear-brake' id='rear-brake'
     {{action 'rearBrake' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'brakesVideo'}}></div>
+
 <div class='brakes front-brake' id='front-brake'
     {{action 'frontBrake' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'brakesVideo'}}></div>
 <div class='bearings rear-hub' id='rear-hub'
     {{action 'rearHub' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'hubVideo'}}></div>
 <div class='bearings front-hub' id='front-hub'
     {{action 'frontHub' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'hubVideo'}}></div>
 <div class='shifting rear-der' id='rear-der'
     {{action 'rearDer' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'rearDerVideo'}}></div>
 <div class='shifting front-der' id='front-der'
     {{action 'frontDer' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'frontDerVideo'}}></div>
 <div class='shifting chain-top' id='chain-top'
     {{action 'chain' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'chainVideo'}}></div>
 <div class='shifting chain-bottom' id='chain-bottom'
     {{action 'chain' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'chainVideo'}}></div>
 <div class='drivetrain pedals' id='pedals'
     {{action 'pedals' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'cranksVideo'}}></div>
 <div class='drivetrain cranks crankarm' id='crankarm'
     {{action 'cranks' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'cranksVideo'}}></div>
 <div class='drivetrain cranks chainring' id='chainring'
     {{action 'cranks' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'cranksVideo'}}></div>
 <div class='drivetrain cassette'
     {{action 'cassette' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'cassetteVideo'}}></div>
 <div class='wheel back-wheel' id='back-wheel'
     {{action 'backWheel' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}
     {{action 'backWheelVideo'}}></div>
 <div class='wheel front-wheel' id='front-wheel'
     {{action 'frontWheel' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}></div>
+    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'frontWheelVideo'}}></div>
 </div>
 <h1>{{message}}</h1>

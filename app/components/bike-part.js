@@ -4,8 +4,43 @@ export default Ember.Component.extend({
   message: '',
   actions: {
     backWheelVideo() {
-      console.log('backWheelVideo in bike-part')
-      this.sendAction('backWheelVideo', 'https://www.youtube.com/embed/YrGDT2HV6As');
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/r5krHXaKct0');
+    },
+    frontWheelVideo() {
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/YrGDT2HV6As');
+    },
+    cassetteVideo() {
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/7arx9VxVJpw');
+    },
+    cranksVideo() {
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/vHc4dTbo9r0');
+    },
+    chainVideo() {
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/cw8RemKLesw');
+    },
+    frontDerVideo() {
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/rt-DkIuwMf8');
+    },
+    rearDerVideo() {
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/3BX64Qh94e0');
+    },
+    hubVideo() {
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/9j-X7xvbMT0');
+    },
+    brakesVideo() {
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/lN-wU5wto2c');
+    },
+    bbVideo() {
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/0J7Mhk6Ue3E');
+    },
+    headsetVideo() {
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/83tMWwJXPE4');
+    },
+    shiftingVideo() {
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/3BX64Qh94e0');
+    },
+    cablesVideo() {
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/74PxfRcybfs');
     },
     backWheel() {
       this.set('message', 'Back Wheel');
