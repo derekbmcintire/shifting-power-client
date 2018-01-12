@@ -2,24 +2,24 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   message: '',
-  messages: {
-    backWheel: 'back wheel',
-    frontWheel: 'front wheel',
-    cranks: 'cranks',
-    pedals: 'pedals'
-  },
   actions: {
     backWheel() {
-      this.set('message', this.get('messages.backWheel'))
+      this.set('message', 'Back Wheel')
     },
     frontWheel() {
-      this.set('message', this.get('messages.frontWheel'))
+      this.set('message', 'Front Wheel')
     },
     cranks() {
-      this.set('message', this.get('messages.cranks'))
+      this.set('message', 'Cranks')
     },
     pedals() {
-      this.set('message', this.get('messages.pedals'))
+      this.set('message', 'Pedals')
+    },
+    chain() {
+      this.set('message', 'Chain')
+    },
+    frontDer() {
+      this.set('message', 'Front Derailleur')
     },
     resetMessage() {
       this.set('message', '')

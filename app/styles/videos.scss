@@ -15,6 +15,13 @@
   position: absolute;
 }
 
+.shifting {
+  display: inline-block;
+  position: absolute;
+  z-index: 7;
+  cursor: pointer;
+}
+
 .wheel {
   border-radius: 50%;
   display: inline-block;
@@ -28,6 +35,20 @@
   margin-top: 18.5%;
   width: 37%;
   height: 62%;
+}
+
+#chain-top {
+  width: 16%;
+  height: 2%;
+  margin-top: 35%;
+  margin-left: 25%;
+}
+
+#chain-bottom {
+  width: 23%;
+  height: 2%;
+  margin-top: 44%;
+  margin-left: 21%;
 }
 
 #chainring {
@@ -45,6 +66,13 @@
   margin-left: 50%;
   margin-top: 37%;
   z-index: 4;
+}
+
+#front-der {
+  margin-top: 32%;
+  margin-left: 40.5%;
+  height: 10%;
+  width: 5%;
 }
 
 #front-wheel {
