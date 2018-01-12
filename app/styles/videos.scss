@@ -1,3 +1,10 @@
+.bearings {
+  display: inline-block;
+  z-index: 9;
+  position: absolute;
+  cursor: pointer;
+}
+
 .bike-wrap {
   background-image: url('http://www.anothersomething.org/wp-content/uploads-anothersomething/2014/08/sachs1.jpg');
   border: 3px solid black;
@@ -30,28 +37,28 @@
   position: absolute;
 }
 
-#back-wheel {
+.back-wheel {
   margin-left: 4.5%;
   margin-top: 18.5%;
   width: 37%;
   height: 62%;
 }
 
-#chain-top {
+.chain-top {
   width: 16%;
   height: 2%;
   margin-top: 35%;
   margin-left: 25%;
 }
 
-#chain-bottom {
+.chain-bottom {
   width: 23%;
   height: 2%;
   margin-top: 44%;
   margin-left: 21%;
 }
 
-#chainring {
+.chainring {
   border-radius: 50%;
   height: 15%;
   width: 9%;
@@ -59,7 +66,7 @@
   margin-top: 35.1%;
 }
 
-#crankarm {
+.crankarm {
   transform: rotate(-67deg);
   height: 15%;
   width: 2%;
@@ -68,21 +75,29 @@
   z-index: 4;
 }
 
-#front-der {
+.front-der {
   margin-top: 32%;
   margin-left: 40.5%;
   height: 10%;
   width: 5%;
 }
 
-#front-wheel {
+.front-hub {
+  border-radius: 50%;
+  height: 5.25%;
+  width: 3%;
+  margin-top: 35.75%;
+  margin-left: 76.25%;
+}
+
+.front-wheel {
   margin-left: 58.75%;
   margin-top: 18%;
   width: 38%;
   height: 63%;
 }
 
-#pedals {
+.pedals {
   border-radius: 50%;
   height: 6%;
   width: 3.75%;
@@ -91,7 +106,15 @@
   z-index: 6;
 }
 
-#rear-der {
+.rear-hub {
+  border-radius: 50%;
+  height: 5.25%;
+  width: 3%;
+  margin-top: 36%;
+  margin-left: 21%;
+}
+
+.rear-der {
   margin-top: 38%;
   margin-left: 18%;
   height: 11%;

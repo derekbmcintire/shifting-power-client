@@ -24,6 +24,12 @@ export default Ember.Component.extend({
     rearDer() {
       this.set('message', 'Rear Derailleur')
     },
+    frontHub() {
+      this.set('message', 'Front Hub')
+    },
+    rearHub() {
+      this.set('message', 'Rear Hub')
+    },
     resetMessage() {
       this.set('message', '')
     }

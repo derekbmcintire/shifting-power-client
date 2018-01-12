@@ -5,33 +5,37 @@
 <div class='bearings' id='bb'></div>
 <div class='brakes' id='rear-brake'></div>
 <div class='brakes' id='front-brake'></div>
-<div class='bearings' id='rear-hub'></div>
-<div class='bearings' id='front-hub'></div>
-<div class='shifting' id='rear-der'
-  {{action 'rearDer' on='mouseEnter'}}
-  {{action 'resetMessage' on='mouseLeave'}}></div>
-<div class='shifting' id='front-der'
+<div class='bearings rear-hub' id='rear-hub'
+    {{action 'rearHub' on='mouseEnter'}}
+    {{action 'resetMessage' on='mouseLeave'}}></div>
+<div class='bearings front-hub' id='front-hub'
+    {{action 'frontHub' on='mouseEnter'}}
+    {{action 'resetMessage' on='mouseLeave'}}></div>
+<div class='shifting rear-der' id='rear-der'
+    {{action 'rearDer' on='mouseEnter'}}
+    {{action 'resetMessage' on='mouseLeave'}}></div>
+<div class='shifting front-der' id='front-der'
     {{action 'frontDer' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}></div>
-<div class='shifting' id='chain-top'
+<div class='shifting chain-top' id='chain-top'
     {{action 'chain' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}></div>
-<div class='shifting' id='chain-bottom'
+<div class='shifting chain-bottom' id='chain-bottom'
     {{action 'chain' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}></div>
-<div class='drivetrain' id='pedals'
+<div class='drivetrain pedals' id='pedals'
     {{action 'pedals' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}></div>
-<div class='drivetrain cranks' id='crankarm'
+<div class='drivetrain cranks crankarm' id='crankarm'
     {{action 'cranks' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}></div>
-<div class='drivetrain cranks' id='chainring'
+<div class='drivetrain cranks chainring' id='chainring'
     {{action 'cranks' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}></div>
-<div class='wheel' id='back-wheel'
+<div class='wheel back-wheel' id='back-wheel'
     {{action 'backWheel' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}></div>
-<div class='wheel' id='front-wheel'
+<div class='wheel front-wheel' id='front-wheel'
     {{action 'frontWheel' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}></div>
 </div>
