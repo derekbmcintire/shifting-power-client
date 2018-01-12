@@ -30,6 +30,15 @@ export default Ember.Component.extend({
     rearHub() {
       this.set('message', 'Rear Hub')
     },
+    frontBrake() {
+      this.set('message', 'Front Brake')
+    },
+    rearBrake() {
+      this.set('message', 'Rear Brake')
+    },
+    bottomBracket() {
+      this.set('message', 'Bottom Bracket')
+    },
     resetMessage() {
       this.set('message', '')
     }

@@ -2,9 +2,15 @@
 <div class='brakes' id='levers'></div>
 <div class='shifting' id='paddles'></div>
 <div class='bearings' id='headset'></div>
-<div class='bearings' id='bb'></div>
-<div class='brakes' id='rear-brake'></div>
-<div class='brakes' id='front-brake'></div>
+<div class='bearings bb' id='bb'
+    {{action 'bottomBracket' on='mouseEnter'}}
+    {{action 'resetMessage' on='mouseLeave'}}></div>
+<div class='brakes rear-brake' id='rear-brake'
+    {{action 'rearBrake' on='mouseEnter'}}
+    {{action 'resetMessage' on='mouseLeave'}}></div>
+<div class='brakes front-brake' id='front-brake'
+    {{action 'frontBrake' on='mouseEnter'}}
+    {{action 'resetMessage' on='mouseLeave'}}></div>
 <div class='bearings rear-hub' id='rear-hub'
     {{action 'rearHub' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}></div>

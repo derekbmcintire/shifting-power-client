@@ -1,3 +1,18 @@
+.back-wheel {
+  margin-left: 4.5%;
+  margin-top: 18.5%;
+  width: 37%;
+  height: 62%;
+}
+
+.bb {
+  height: 3.25%;
+  width: 2%;
+  border-radius: 50%;
+  margin-top: 38.75%;
+  margin-left: 45%;
+}
+
 .bearings {
   display: inline-block;
   z-index: 9;
@@ -16,32 +31,11 @@
   text-align: left;
 }
 
-.drivetrain {
-  cursor: pointer;
+.brakes {
   display: inline-block;
   position: absolute;
-}
-
-.shifting {
-  display: inline-block;
-  position: absolute;
-  z-index: 7;
+  z-index: 5;
   cursor: pointer;
-}
-
-.wheel {
-  border-radius: 50%;
-  display: inline-block;
-  z-index: 0;
-  cursor: pointer;
-  position: absolute;
-}
-
-.back-wheel {
-  margin-left: 4.5%;
-  margin-top: 18.5%;
-  width: 37%;
-  height: 62%;
 }
 
 .chain-top {
@@ -75,6 +69,20 @@
   z-index: 4;
 }
 
+.drivetrain {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+}
+
+.front-brake {
+  margin-top: 18.5%;
+  margin-left: 68.5%;
+  width: 4.5%;
+  height: 9%;
+  z-index: 10;
+}
+
 .front-der {
   margin-top: 32%;
   margin-left: 40.5%;
@@ -106,6 +114,13 @@
   z-index: 6;
 }
 
+.rear-brake {
+  margin-top: 19.5%;
+  margin-left: 28.5%;
+  width: 4.5%;
+  height: 9%;
+}
+
 .rear-hub {
   border-radius: 50%;
   height: 5.25%;
@@ -119,4 +134,19 @@
   margin-left: 18%;
   height: 11%;
   width: 6%;
+}
+
+.shifting {
+  display: inline-block;
+  position: absolute;
+  z-index: 7;
+  cursor: pointer;
+}
+
+.wheel {
+  border-radius: 50%;
+  display: inline-block;
+  z-index: 0;
+  cursor: pointer;
+  position: absolute;
 }
