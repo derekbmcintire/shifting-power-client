@@ -20,13 +20,20 @@
   cursor: pointer;
 }
 
+// .bike-bg {
+//   position: absolute;
+//   width: 100%;
+//   z-index: 0;
+// }
+
+
 .bike-wrap {
   background-image: url('http://www.anothersomething.org/wp-content/uploads-anothersomething/2014/08/sachs1.jpg');
   border: 3px solid black;
   background-size: cover;
   display: inline-block;
-  width: 50vw;
-  height: 30vw;
+  width: 36.5vw;
+  height: 22.5vw;
   position: relative;
   text-align: left;
 }
