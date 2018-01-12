@@ -1,0 +1,34 @@
+.bike-wrap {
+  background-image: url('http://www.anothersomething.org/wp-content/uploads-anothersomething/2014/08/sachs1.jpg');
+  border: 3px solid black;
+  background-size: cover;
+  display: inline-block;
+  width: 50vw;
+  height: 30vw;
+  position: relative;
+  text-align: left;
+}
+
+
+.back-wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: pink;
+}
+
+.wheel {
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+  z-index: 0;
+  cursor: pointer;
+}
+
+#back-wheel {
+  margin-left: 4.5%;
+  margin-top: 19%;
+  width: 37%;
+  height: 60%;
+  posistion: absolute;
+}
