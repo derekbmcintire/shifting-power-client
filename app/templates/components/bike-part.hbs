@@ -1,7 +1,9 @@
 <div class='bike-wrap'>
 <div class='brakes' id='levers'></div>
 <div class='shifting' id='paddles'></div>
-<div class='bearings' id='headset'></div>
+<div class='bearings headset' id='headset'
+    {{action 'headset' on='mouseEnter'}}
+    {{action 'resetMessage' on='mouseLeave'}}></div>
 <div class='bearings bb' id='bb'
     {{action 'bottomBracket' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}></div>

@@ -39,6 +39,9 @@ export default Ember.Component.extend({
     bottomBracket() {
       this.set('message', 'Bottom Bracket')
     },
+    headset() {
+      this.set('message', 'Headset')
+    },
     resetMessage() {
       this.set('message', '')
     }
