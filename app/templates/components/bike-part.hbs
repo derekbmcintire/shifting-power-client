@@ -7,7 +7,9 @@
 <div class='brakes' id='front-brake'></div>
 <div class='bearings' id='rear-hub'></div>
 <div class='bearings' id='front-hub'></div>
-<div class='shifting' id='rear-der'></div>
+<div class='shifting' id='rear-der'
+  {{action 'rearDer' on='mouseEnter'}}
+  {{action 'resetMessage' on='mouseLeave'}}></div>
 <div class='shifting' id='front-der'
     {{action 'frontDer' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}></div>
