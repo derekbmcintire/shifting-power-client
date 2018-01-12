@@ -38,6 +38,22 @@
   cursor: pointer;
 }
 
+.cables {
+  display: inline-block;
+  position: absolute;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.cassette {
+  border-radius: 50%;
+  height: 11%;
+  width: 6.5%;
+  margin-left: 19.5%;
+  margin-top: 34%;
+  z-index: 4;
+}
+
 .chain-top {
   width: 16%;
   height: 2%;
@@ -114,6 +130,20 @@
   transform: rotate(-23deg);
 }
 
+.levers {
+  margin-top: 4.5%;
+  margin-left: 70%;
+  height: 16%;
+  width: 7%;
+}
+
+.paddles {
+  margin-top: 8%;
+  margin-left: 72%;
+  width: 3%;
+  height: 10%;
+}
+
 .pedals {
   border-radius: 50%;
   height: 6%;
@@ -145,11 +175,27 @@
   width: 6%;
 }
 
+.seat-tube-cables {
+  margin-top: 17%;
+  margin-left: 40%;
+  height: 30%;
+  width: 1%;
+  transform: rotate(-20deg);
+}
+
 .shifting {
   display: inline-block;
   position: absolute;
   z-index: 7;
   cursor: pointer;
+}
+
+.top-cables {
+  margin-top: 13.80%;
+  margin-left: 38%;
+  height: 1.5%;
+  width: 23%;
+  transform: rotate(-5deg);
 }
 
 .wheel {

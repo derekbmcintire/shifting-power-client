@@ -42,6 +42,18 @@ export default Ember.Component.extend({
     headset() {
       this.set('message', 'Headset')
     },
+    paddles() {
+      this.set('message', 'Shifters')
+    },
+    levers() {
+      this.set('message', 'Brake Levers')
+    },
+    cables() {
+      this.set('message', 'Cables and Housing')
+    },
+    cassette() {
+      this.set('message', 'Cassette/Freewheel')
+    },
     resetMessage() {
       this.set('message', '')
     }

@@ -1,6 +1,16 @@
 <div class='bike-wrap'>
-<div class='brakes' id='levers'></div>
-<div class='shifting' id='paddles'></div>
+  <div class='cables seat-tube-cables'
+  {{action 'cables' on='mouseEnter'}}
+  {{action 'resetMessage' on='mouseLeave'}}></div>
+  <div class='cables top-cables'
+  {{action 'cables' on='mouseEnter'}}
+  {{action 'resetMessage' on='mouseLeave'}}></div>
+<div class='brakes levers' id='levers'
+    {{action 'levers' on='mouseEnter'}}
+    {{action 'resetMessage' on='mouseLeave'}}></div>
+<div class='shifting paddles' id='paddles'
+    {{action 'paddles' on='mouseEnter'}}
+    {{action 'resetMessage' on='mouseLeave'}}></div>
 <div class='bearings headset' id='headset'
     {{action 'headset' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}></div>
@@ -39,6 +49,9 @@
     {{action 'resetMessage' on='mouseLeave'}}></div>
 <div class='drivetrain cranks chainring' id='chainring'
     {{action 'cranks' on='mouseEnter'}}
+    {{action 'resetMessage' on='mouseLeave'}}></div>
+<div class='drivetrain cassette'
+    {{action 'cassette' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}></div>
 <div class='wheel back-wheel' id='back-wheel'
     {{action 'backWheel' on='mouseEnter'}}
