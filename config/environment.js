@@ -52,7 +52,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/shifting-power-client';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'https://shifting-power.herokuapp.com/';
+    ENV.apiHost = 'https://shifting-power.herokuapp.com';
   }
 
   return ENV;
