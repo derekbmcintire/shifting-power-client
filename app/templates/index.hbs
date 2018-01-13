@@ -1,1 +1,6 @@
-{{bike-video-container}}
+{{bike-video-container video='getVideo' getVideo='getVideo'}}
+<h1>All Videos</h1>
+{{#each model as |video|}}
+  <h3>{{video.title}} </h3>
+  {{featured-video url=video.url}}
+{{/each}}
