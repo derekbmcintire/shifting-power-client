@@ -32,8 +32,8 @@
   border: 3px solid black;
   background-size: cover;
   display: inline-block;
-  width: 36.5vw;
-  height: 22.5vw;
+  width: 50vw;
+  height: 30vw;
   position: relative;
   text-align: left;
 }
@@ -98,6 +98,12 @@
   position: absolute;
 }
 
+.dropdown {
+  background-color: transparent;
+  margin-top: 8px;
+  padding: 0;
+}
+
 .front-brake {
   margin-top: 18.5%;
   margin-left: 68.5%;
@@ -114,6 +120,7 @@
 }
 
 .front-hub {
+  border: 2px solid green;
   border-radius: 50%;
   height: 5.25%;
   width: 3%;
@@ -122,6 +129,7 @@
 }
 
 .front-wheel {
+  border: 2px solid red;
   margin-left: 58.75%;
   margin-top: 18%;
   width: 38%;

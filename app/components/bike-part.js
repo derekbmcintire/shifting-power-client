@@ -13,7 +13,7 @@ export default Ember.Component.extend({
       this.sendAction('newVideo', 'https://www.youtube.com/embed/7arx9VxVJpw');
     },
     cranksVideo() {
-      this.sendAction('getVideo', 1);
+      this.sendAction('newVideo', 'https://www.youtube.com/embed/vHc4dTbo9r0');
     },
     chainVideo() {
       this.sendAction('newVideo', 'https://www.youtube.com/embed/cw8RemKLesw');

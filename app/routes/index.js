@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   },
   actions: {
     getVideo(id) {
-      return this.get('store').findRecord('video', id)
-    }
+      return this.transitionTo('video', id)
+  }
   }
 });
