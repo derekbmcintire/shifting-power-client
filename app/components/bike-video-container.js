@@ -7,6 +7,9 @@ export default Ember.Component.extend({
     newVideo(url) {
       this.set('featuredUrl', url)
       console.log(this.get('featuredUrl'))
+    },
+    getVideos(tagName) {
+      this.sendAction('getVideos', tagName);
     }
   }
 

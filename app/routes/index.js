@@ -1,12 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  tagId: '8',
   model () {
-    return this.get('store').findAll('video');
+    return this.get('store').findRecord('tag', this.get('tagId'))
   },
   actions: {
-    getVideo(id) {
-      return this.transitionTo('video', id)
-  }
+    getVideos () {
+      console.log('getVideos happens')
+      this.set('tagId', '9')
+    }
   }
 });

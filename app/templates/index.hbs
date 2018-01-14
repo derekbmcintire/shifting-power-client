@@ -1,6 +1,6 @@
-{{bike-video-container url=currentVid.url getVideo='getVideo'}}
+{{bike-video-container url=currentVid.url getVideos='getVideos'}}
 <h1>All Videos</h1>
-{{#each model as |video|}}
-  <h3>{{video.title}} </h3>
+{{#each model.videos as |video|}}
+  <h3>{{video.name}}</h3>
   {{featured-video url=video.url}}
 {{/each}}
