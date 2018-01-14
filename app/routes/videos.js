@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model () {
-    return this.get('store').findAll('video');
+  model (params) {
+    return this.get('store').findRecord('tag', params.tag_id)
   },
 });

@@ -12,9 +12,13 @@ export default Ember.Component.extend({
     cassetteVideo() {
       this.sendAction('newVideo', 'https://www.youtube.com/embed/7arx9VxVJpw');
     },
+
+
     cranksVideo() {
-      this.sendAction('newVideo', 'https://www.youtube.com/embed/vHc4dTbo9r0');
+      this.sendAction('getVideo', '8');
     },
+
+
     chainVideo() {
       this.sendAction('newVideo', 'https://www.youtube.com/embed/cw8RemKLesw');
     },

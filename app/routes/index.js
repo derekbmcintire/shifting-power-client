@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   },
   actions: {
     getVideo(id) {
-      return this.transitionTo('video', id)
+      return this.transitionTo('videos', id)
   }
   }
 });
