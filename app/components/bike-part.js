@@ -4,47 +4,46 @@ export default Ember.Component.extend({
   message: '',
   actions: {
     backWheelVideo() {
-      this.sendAction('newVideo', 'https://www.youtube.com/embed/r5krHXaKct0');
+      this.sendAction('getVideo', '11');
     },
     frontWheelVideo() {
-      this.sendAction('newVideo', 'https://www.youtube.com/embed/YrGDT2HV6As');
+      this.sendAction('getVideo', '11');
     },
     cassetteVideo() {
-      this.sendAction('newVideo', 'https://www.youtube.com/embed/7arx9VxVJpw');
+      this.sendAction('getVideo', '8');
     },
-
-
     cranksVideo() {
       this.sendAction('getVideo', '8');
     },
 
 
     chainVideo() {
-      this.sendAction('newVideo', 'https://www.youtube.com/embed/cw8RemKLesw');
+      this.sendAction('getVideo', '8');
     },
+
     frontDerVideo() {
-      this.sendAction('newVideo', 'https://www.youtube.com/embed/rt-DkIuwMf8');
+      this.sendAction('getVideo', '9');
     },
     rearDerVideo() {
-      this.sendAction('newVideo', 'https://www.youtube.com/embed/3BX64Qh94e0');
+      this.sendAction('getVideo', '9');
     },
     hubVideo() {
-      this.sendAction('newVideo', 'https://www.youtube.com/embed/9j-X7xvbMT0');
+      this.sendAction('getVideo', '10');
     },
     brakesVideo() {
-      this.sendAction('newVideo', 'https://www.youtube.com/embed/lN-wU5wto2c');
+      this.sendAction('getVideo', '12');
     },
     bbVideo() {
-      this.sendAction('newVideo', 'https://www.youtube.com/embed/0J7Mhk6Ue3E');
+      this.sendAction('getVideo', '10');
     },
     headsetVideo() {
-      this.sendAction('newVideo', 'https://www.youtube.com/embed/83tMWwJXPE4');
+      this.sendAction('getVideo', '10');
     },
     shiftingVideo() {
-      this.sendAction('newVideo', 'https://www.youtube.com/embed/3BX64Qh94e0');
+      this.sendAction('getVideo', '9');
     },
     cablesVideo() {
-      this.sendAction('newVideo', 'https://www.youtube.com/embed/74PxfRcybfs');
+      this.sendAction('getVideo', '13');
     },
     backWheel() {
       this.set('message', 'Back Wheel');

@@ -1,6 +1,5 @@
-<h1>All Videos</h1>
+<h1>{{model.name}}</h1>
 {{#each model.videos as |video|}}
   <h3>{{tag.title}} </h3>
   {{featured-video url=video.url}}
 {{/each}}
-{{bike-part getVideo='getVideo' newVideo='newVideo'}}
