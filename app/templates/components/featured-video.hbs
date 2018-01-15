@@ -1,4 +1,5 @@
 <iframe class='video-wheel' width="426" height="240" src={{video.url}} frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+{{#if isAuthenticated}}
 <form {{action 'createRating' this on='submit'}}>
   <h4>Rate this video:</h4>
   <ul>
@@ -16,6 +17,7 @@
   </ul>
 
   </form>
+  {{/if}}
 {{#if video.length}}
 <h5>Rated {{video.avg}}/10 by {{video.length}} ratings.</h5>
 {{/if}}
