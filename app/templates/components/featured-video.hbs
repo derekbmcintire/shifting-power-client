@@ -1,4 +1,18 @@
 <iframe class='video-wheel' width="426" height="240" src={{video.url}} frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<form {{action 'createRating' on='submit'}}>
+  <h4>Rate this video:</h4>
+  <ul>
+  <li class='rate-btn text-center'>{{input name='rating' type='radio' value=1}} 1</li>
+
+  <li class='rate-btn text-center'>{{input name='rating' type='radio' value=2}} 2</li>
+
+  <li class='rate-btn text-center'>{{input name='rating' type='radio' value=3}} 3</li>
+
+  <li class='rate-btn text-center'>{{input name='rating' type='radio' value=4}} 4</li>
+
+  <li class='rate-btn text-center'>{{input name='rating' type='radio' value=5}} 5</li>
+</ul>
+  </form>
 {{#if video.length}}
 <h5>Rated {{video.avg}}/10 by {{video.length}} ratings.</h5>
 {{/if}}
