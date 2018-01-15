@@ -1,1 +1,5 @@
 <iframe class='video-wheel' width="426" height="240" src={{url}} frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<h5>Sum: {{video.avg}}</h5>
+{{#each video.ratings as |rating|}}
+<h5>Rated: {{rating.rating}}/10</h5>
+{{/each}}
