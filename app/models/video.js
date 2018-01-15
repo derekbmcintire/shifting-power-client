@@ -6,8 +6,10 @@ export default DS.Model.extend({
   ratings: DS.hasMany('userrating'),
   numRatings: Ember.computed.mapBy('ratings', 'rating'),
   sum: Ember.computed.sum('numRatings'),
-  avg: Ember.computed('numRatings', 'sum', function () {
-    let many = this.get('numRatings').length
-    return Math.floor(sum / many)
+  length: Ember.computed('numRatings', function () {
+    return this.get('numRatings').length
+  }),
+  avg: Ember.computed('length', 'sum', function () {
+    return Math.floor(this.get('sum') / this.get('length'))
   })
 });
