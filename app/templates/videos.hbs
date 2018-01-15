@@ -1,11 +1,10 @@
 <h1>{{model.name}}</h1>
-{{log "model is " model}}
 {{#each model.videos as |video|}}
-{{log "video is " video}}
-{{log "ratings is " video.ratings}}
   <h3>{{video.title}} </h3>
   {{featured-video url=video.url}}
-  {{#each video.ratings as |vid|}}
-  <h5>hi</h5>
+  <h5>Rated: {{video.sum}}/10</h5>
+  {{#each video.ratings as |rating|}}
+  {{log 'ratings is ' rating}}
+  <h5>Rated: {{rating.rating}}/10</h5>
   {{/each}}
 {{/each}}
