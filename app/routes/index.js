@@ -29,31 +29,30 @@ export default Ember.Route.extend({
       }).then(function(result) {
         // when results are returned check to see what they are
         // returning the correct length
-        console.log('first result id is ', result.get('firstObject').id)
+        console.log('first result is ', result.get('length'))
         // if result exists log that user has already rated video
 
         // find the first returned record by id
         // something is going wrong here
-        if (result) {
-          console.log(result.get('store'))
-          result.get('store').findRecord('userrating', (result.get('firstObject').id)).then(function(singleResult) {
+        if (result.get('length') !== 0) {
+          console.log('get result is ', result.get('firstObject').id)
+          result.get('store').findRecord('userrating', result.get('firstObject').id).then(function(result) {
             // then set the 'rating' to the passed rating
             // console.logging to see current and new ratings
-            console.log('result rating ', singleResult.get('rating'))
-            console.log('new rating is ', rating.rating)
+
             // set the results rating to the new rating
-            singleResult.set('rating', rating.rating)
+            result.set('rating', rating.rating)
             // save the result
-            singleResult.save()
+            result.save()
           }).then(function() {
             console.log('updated successfully')
           }).catch(console.error)
           console.log('you already rated this video')
         } else {
           // if nothing is returned, create a new record
-          let newRate = this.get('store').createRecord('userrating', rating)
-          newRate.save().then(function() {
-            console.log('rating saved')
+
+          result.get('store').createRecord('userrating', rating).save().then(function() {
+            console.log('it maybe worked')
           })
         }
       })
