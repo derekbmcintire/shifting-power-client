@@ -9,10 +9,10 @@ export default Ember.Route.extend({
       return this.transitionTo('videos', id)
   },
   newRating(rating) {
-    console.log('got to index.', rating)
-    console.log('in index video id ', rating.video_id)
     let newRate = this.get('store').createRecord('userrating', rating)
-    newRate.save()
+    newRate.save().then(function() {
+      console.log('rating saved')
+    })
   }
   }
 });

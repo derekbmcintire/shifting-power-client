@@ -15,8 +15,6 @@ export default Ember.Component.extend({
     change(video){
       this.set('rating.video', video)
       this.sendAction('newRating', this.get('rating'))
-      console.log('rating is: ', this.get('rating'));
-      console.log('video id is: ', this.get('rating').video)
     }
   }
 });
