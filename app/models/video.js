@@ -10,6 +10,6 @@ export default DS.Model.extend({
     return this.get('numRatings').length
   }),
   avg: Ember.computed('length', 'sum', function () {
-    return Math.floor(this.get('sum') / this.get('length'))
+    return Math.round(this.get('sum') / this.get('length'))
   })
 });
