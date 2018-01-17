@@ -4,6 +4,7 @@ export default Ember.Route.extend({
   model () {
     return this.get('store').findAll('video');
   },
+  message: 'message',
   auth: Ember.inject.service(),
   user: Ember.computed.alias('auth.credentials.id'),
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
