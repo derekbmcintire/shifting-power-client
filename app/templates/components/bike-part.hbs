@@ -1,5 +1,6 @@
 <div class='bike-wrap'>
-  {{!-- <img class='bike-bg' src='http://www.anothersomething.org/wp-content/uploads-anothersomething/2014/08/sachs1.jpg'> --}}
+  {{!-- each div represents a bicycle part and displays the name of that part
+  on hover, and calls an action to show related videos when clicked --}}
 <div class='cables seat-tube-cables'
     {{action 'cables' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}
@@ -28,7 +29,6 @@
     {{action 'rearBrake' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}
     {{action 'brakesVideo'}}></div>
-
 <div class='brakes front-brake' id='front-brake'
     {{action 'frontBrake' on='mouseEnter'}}
     {{action 'resetMessage' on='mouseLeave'}}

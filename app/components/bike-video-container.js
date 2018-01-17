@@ -4,12 +4,8 @@ export default Ember.Component.extend({
   featuredUrl: '',
   classNames: ['text-center'],
   actions: {
-    newVideo(url) {
-      this.set('featuredUrl', url)
-      console.log(this.get('featuredUrl'))
-    },
+    // send the getVideo action to the index route template
     getVideo(tagId) {
-      console.log('received in bike-video-container', tagId)
       this.sendAction('getVideo', tagId)
     }
   }
