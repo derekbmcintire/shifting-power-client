@@ -15,6 +15,10 @@ export default Ember.Component.extend({
     change(video){
       this.set('rating.video', video)
       this.sendAction('newRating', this.get('rating'))
+    },
+    delRate(video){
+      this.set('rating.video', video)
+      this.sendAction('delRate', this.get('rating'))
     }
   }
 });

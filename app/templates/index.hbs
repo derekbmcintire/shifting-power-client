@@ -2,5 +2,5 @@
 <h1>All Videos</h1>
 {{#each model as |video|}}
   <h3>{{video.title}} </h3>
-  {{featured-video newRating='newRating' video=video}}
+  {{featured-video delRate='delRate' newRating='newRating' video=video}}
 {{/each}}
