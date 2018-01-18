@@ -17,11 +17,11 @@ If a user wants to rate a video, they must sign up and sign in to the applicatio
 
 ## Technologies Used
 
-This client-side application was built using Ember on top of a Ruby on Rails API/PostgreSQL database.
+This client-side application was built using EmberJS on top of a Ruby on Rails API/PostgreSQL database.
 
 ## Future Versions
 
-#### Future goals for Shifting power include:
+#### Future goals for Shifting Power include:
 - Building an admin view that would allow an admin user to perform CRUD actions on videos and tags.
 - The option to change langauge to Spanish. These videos were produced in both English and Spanish, and I would like this app to be more accessable to users who speak languages other than English.
 - Add more videos/resources. A third party API could be integrated to give a user access to even more videos and resources related to the bike part they have clicked on or searched for.
