@@ -18,6 +18,11 @@ export default Ember.Route.extend({
   },
   delRate(rating) {
     this.get('rate').delRate(rating);
+    // setTimeout(()=>{
+    //   this.transitionTo('change-password')
+    //   this.transitionTo('index')
+    // }, 2000)
+
   },
   newRating(rating) {
     this.get('rate').newRating(rating);

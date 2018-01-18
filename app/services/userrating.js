@@ -6,6 +6,7 @@ export default Ember.Service.extend({
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
   flashMessages: Ember.inject.service(),
   store: Ember.inject.service(),
+  routing: Ember.inject.service('-routing'),
   beenRated: null,
 
   userVideoRating(rating) {
@@ -43,6 +44,11 @@ export default Ember.Service.extend({
         // delete that record
         result.get('firstObject').deleteRecord();
         result.get('firstObject').save();
+      }).then(() => {
+        this.get("routing").transitionTo('change-password');
+
+      }).then(() => {
+        this.get("routing").transitionTo('index');
       })
       .then(() => {
         // display successful delete message
@@ -66,9 +72,14 @@ export default Ember.Service.extend({
           // this result should always be a DS.PromiseArray
           // with only a single object
           // set the new rating for the first (only) object and save
-          console.log(result.get('firstObject'))
           result.get('firstObject').set('rating', rating.rating);
           result.get('firstObject').save()
+        .then(() => {
+          this.get("routing").transitionTo('change-password');
+
+          }).then(() => {
+            this.get("routing").transitionTo('index');
+          })
         .then(() => {
           // display success message
           this.get('flashMessages')
@@ -82,6 +93,12 @@ export default Ember.Service.extend({
       } else {
         // if nothing is returned, create a new record
         result.get('store').createRecord('userrating', rating).save()
+        .then(() => {
+          this.get("routing").transitionTo('change-password');
+
+        }).then(() => {
+          this.get("routing").transitionTo('index');
+        })
           .then(() => {
             // display success message
             this.get('flashMessages')
