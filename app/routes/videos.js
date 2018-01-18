@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model (params) {
-    return this.get('store').findRecord('tag', params.tag_id)
+    return this.get('store').findRecord('tag', params.tag_id);
   },
   auth: Ember.inject.service(),
   rate: Ember.inject.service('userrating'),
@@ -10,10 +10,10 @@ export default Ember.Route.extend({
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
   actions: {
     delRate(rating) {
-      this.get('rate').delRate(rating)
+      this.get('rate').delRate(rating);
     },
     newRating(rating) {
-      this.get('rate').newRating(rating)
+      this.get('rate').newRating(rating);
     }
   }
 });

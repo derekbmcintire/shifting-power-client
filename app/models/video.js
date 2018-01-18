@@ -11,10 +11,10 @@ export default DS.Model.extend({
   sum: Ember.computed.sum('numRatings'),
   // returns the number of ratings a video has
   length: Ember.computed('numRatings', function () {
-    return this.get('numRatings').length
+    return this.get('numRatings').length;
   }),
   // returns the average rating of a video
   avg: Ember.computed('length', 'sum', function () {
-    return Math.round(this.get('sum') / this.get('length'))
+    return Math.round(this.get('sum') / this.get('length'));
   })
 });

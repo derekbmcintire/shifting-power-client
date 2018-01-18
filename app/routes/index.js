@@ -13,13 +13,13 @@ export default Ember.Route.extend({
   actions: {
     // transitions a user to a specific videos route
     getVideo(id) {
-      return this.transitionTo('videos', id)
+      return this.transitionTo('videos', id);
   },
   delRate(rating) {
-    this.get('rate').delRate(rating)
+    this.get('rate').delRate(rating);
   },
   newRating(rating) {
-    this.get('rate').newRating(rating)
+    this.get('rate').newRating(rating);
   }
   }
 });

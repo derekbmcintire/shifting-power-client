@@ -21,8 +21,8 @@ export default Ember.Service.extend({
       .then((result) => {
         // get the first (only) object in the returned array
         // delete that record
-        result.get('firstObject').deleteRecord()
-        result.get('firstObject').save()
+        result.get('firstObject').deleteRecord();
+        result.get('firstObject').save();
       })
       .then(() => {
         // display successful delete message
@@ -33,7 +33,7 @@ export default Ember.Service.extend({
         // display unsuccessful delete message
         this.get('flashMessages')
           .danger('Rating not deleted.');
-      })
+      });
   },
 
   // action to create or update a userrating
@@ -57,7 +57,7 @@ export default Ember.Service.extend({
           // this result should always be a DS.PromiseArray
           // with only a single object
           // set the new rating for the first (only) object and save
-          result.get('firstObject').set('rating', rating.rating)
+          result.get('firstObject').set('rating', rating.rating);
           result.get('firstObject').save()
         .then(() => {
           // display success message
@@ -68,7 +68,7 @@ export default Ember.Service.extend({
           // display failure message
           this.get('flashMessages')
             .danger('Rating not updated.');
-        })
+        });
       } else {
         // if nothing is returned, create a new record
         result.get('store').createRecord('userrating', rating).save()
@@ -80,8 +80,8 @@ export default Ember.Service.extend({
               // display failure message
               this.get('flashMessages')
                 .danger('Rating not created.');
-            })
+            });
       }
-    })
+    });
   }
 });
