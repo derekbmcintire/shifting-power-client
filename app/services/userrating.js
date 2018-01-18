@@ -6,18 +6,38 @@ export default Ember.Service.extend({
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
   flashMessages: Ember.inject.service(),
   store: Ember.inject.service(),
+  beenRated: null,
 
-  // action to delete a userrating
-  delRate(rating) {
+  userVideoRating(rating) {
     // sends a request to the API to return any userrating where user_id and
     // video_id match what are passed to it
     // this should always be a DS.PromiseArray that contains a single object
-    this.get('store').query('userrating', {
+    return this.get('store').query('userrating', {
       filter: {
         user_id: this.getProperties('user').user,
         video_id: rating.video.id
       }
+    }).then((result)=>{
+      // when results are returned check if length
+      // is greater than 0
+      // this will prevent any user from rating a video more than once
+      // so when the above query is run there can never be more than
+      // one object returned
+      // set beenRated to boolean T or F to represent if
+      // current user has rated the video
+      if (result.get('length') > 0) {
+        this.set('beenRated', true)
+        return result
+      } else {
+        this.set('beenRated', false)
+        return result
+      }
     })
+  },
+
+  // action to delete a userrating
+  delRate(rating) {
+    this.userVideoRating(rating)
       .then((result) => {
         // get the first (only) object in the returned array
         // delete that record
@@ -38,22 +58,11 @@ export default Ember.Service.extend({
 
   // action to create or update a userrating
   newRating(rating) {
-    // send a GET request to get userratings
-    // filtered by user_id and video_id
-    // passingfilter as a param to the index action
-    this.get('store').query('userrating', {
-      filter: {
-        user_id: this.getProperties('user').user,
-        video_id: rating.video.id
-      }
-    })
+    this.userVideoRating(rating)
       .then((result) => {
-        // when results are returned check if length
-        // is greater than 0
-        // this will prevent any user from rating a video more than once
-        // so when the above query is run there can never be more than
-        // one object returned
-        if (result.get('length') > 0) {
+        // check if current user has previously
+        // rated this video
+        if (this.get('beenRated')) {
           // this result should always be a DS.PromiseArray
           // with only a single object
           // set the new rating for the first (only) object and save
