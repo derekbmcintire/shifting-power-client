@@ -9,14 +9,14 @@ export default Ember.Service.extend({
   routing: Ember.inject.service('-routing'),
   beenRated: null,
 
-  userVideoRating(rating) {
+  userVideoRating(video) {
     // sends a request to the API to return any userrating where user_id and
     // video_id match what are passed to it
     // this should always be a DS.PromiseArray that contains a single object
     return this.get('store').query('userrating', {
       filter: {
         user_id: this.getProperties('user').user,
-        video_id: rating.video.id
+        video_id: video.id
       }
     }).then((result)=>{
       // when results are returned check if length
@@ -37,8 +37,8 @@ export default Ember.Service.extend({
   },
 
   // action to delete a userrating
-  delRate(rating) {
-    this.userVideoRating(rating)
+  delRate(video) {
+    this.userVideoRating(video)
       .then((result) => {
         // get the first (only) object in the returned array
         // delete that record
@@ -46,8 +46,8 @@ export default Ember.Service.extend({
         result.get('firstObject').save();
       }).then(() => {
         // console.log('rating is ', rating)
-        console.log('rating.get(video.id) is ', rating.video.id)
-        return this.get('store').findRecord('video', rating.video.id)
+        console.log('rating.get(video.id) is ', video.id)
+        return this.get('store').findRecord('video', video.id)
       })
       .then(() => {
         // display successful delete message
@@ -63,7 +63,7 @@ export default Ember.Service.extend({
 
   // action to create or update a userrating
   newRating(rating) {
-    this.userVideoRating(rating)
+    this.userVideoRating(rating.video)
       .then((result) => {
         // check if current user has previously
         // rated this video

@@ -17,8 +17,7 @@ export default Ember.Component.extend({
     // assign the video to the rating object above
     // send action up to index route template
     delRate(video){
-      this.set('rating.video', video);
-      this.sendAction('delRate', this.get('rating'));
+      this.sendAction('delRate', video);
     }
   }
 });
