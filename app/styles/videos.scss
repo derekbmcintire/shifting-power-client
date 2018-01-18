@@ -1,3 +1,6 @@
+body {
+  padding-bottom: 25px;
+}
 .back-wheel {
   margin-left: 4.5%;
   margin-top: 18.5%;
@@ -38,9 +41,8 @@
   cursor: pointer;
 }
 
-body {
-  margin: 0 auto;
-  text-align: center;
+.btn-secondary:hover {
+  border: 1px solid black;
 }
 
 .cables {
@@ -97,9 +99,14 @@ body {
 }
 
 .dropdown {
-  background-color: transparent;
-  margin-top: 8px;
+  margin-top: 15px;
   padding: 0;
+}
+
+.form-horizontal {
+  margin: 0 auto;
+  min-width: 400px;
+  width: 40%;
 }
 
 .front-brake {
@@ -168,6 +175,11 @@ body {
   z-index: 6;
 }
 
+.navbar {
+  background-color: white;
+}
+
+
 .radio-list {
   list-style: none;
   padding: 0;
@@ -223,11 +235,21 @@ body {
   transform: rotate(-20deg);
 }
 
+.single-video {
+  display: inline-block;
+  text-align: center;
+}
+
 .shifting {
   display: inline-block;
   position: absolute;
   z-index: 7;
   cursor: pointer;
+}
+
+.tag-header {
+  margin: 20px;
+  text-align: center;
 }
 
 .top-cables {
