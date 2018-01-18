@@ -17,8 +17,7 @@ If a user wants to rate a video, they must sign up and sign in to the applicatio
 
 ## Technologies Used
 
-This API was built using Ruby on Rails with a PostgreSQL database.
-
+This client-side application was built using Ember on top of a Ruby on Rails API/PostgreSQL database.
 
 ## Future Versions
 
