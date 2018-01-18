@@ -1,3 +1,4 @@
+/*global Ember */
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -12,6 +13,11 @@ export default DS.Model.extend({
   // returns the number of ratings a video has
   length: Ember.computed('numRatings', function () {
     return this.get('numRatings').length;
+  }),
+  one: Ember.computed('length', function () {
+    if (this.get('length') === 1) {
+      return true
+    }
   }),
   // returns the average rating of a video
   avg: Ember.computed('length', 'sum', function () {

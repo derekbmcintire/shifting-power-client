@@ -38,6 +38,11 @@
   cursor: pointer;
 }
 
+body {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .cables {
   display: inline-block;
   position: absolute;
@@ -163,6 +168,11 @@
   z-index: 6;
 }
 
+.radio-list {
+  list-style: none;
+  padding: 0;
+}
+
 .rate-delete {
   margin-left: 30px;
 }
@@ -174,7 +184,13 @@
 
 .rate-btn {
   display: inline-block;
+  text-align: center;
   width: 25px;
+}
+
+.rating-form {
+  display: inline-block;
+  text-align: center;
 }
 
 .rear-brake {
@@ -220,6 +236,41 @@
   height: 1.5%;
   width: 23%;
   transform: rotate(-5deg);
+}
+
+.video-component {
+  border: 1px solid black;
+  float: left;
+  margin: 5px;
+  width: 465px;
+  padding: 15px;
+  text-align: center;
+}
+
+.video-container {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  width: 1430px;
+}
+
+@media (max-width: 1500px) {
+  .video-container {
+    width: 954px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .video-container {
+    width: 475px;
+  }
+}
+
+.videos-wrap {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
 }
 
 .wheel {

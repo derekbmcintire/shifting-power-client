@@ -1,0 +1,7 @@
+<h1 class='text-center'>All Videos</h1>
+<div class='video-container'>
+{{#each model as |video|}}
+  {{featured-video delRate='delRate' newRating='newRating' video=video}}
+  <h4>{{message}}</h4>
+{{/each}}
+</div>

@@ -1,0 +1,24 @@
+<form class='rating-form' {{action 'change' video on='change'}}>
+  <h4>How helpful was this video?</h4>
+  <ul class='radio-list'>
+    <li class='rate-label text-center'>(Not helpful)</li>
+
+    {{!-- for each radio button call an action on change
+    mutate 'rating' to have the value of the second argument
+    in this case '1' --}}
+    <li class='rate-btn text-center'>{{input type="radio" name="rating" change=(action (mut rating.rating) '1')}} 1</li>
+
+    <li class='rate-btn text-center'>{{input type="radio" name="rating" change=(action (mut rating.rating) '2')}} 2</li>
+
+    <li class='rate-btn text-center'>{{input type="radio" name="rating" change=(action (mut rating.rating) '3')}} 3</li>
+
+    <li class='rate-btn text-center'>{{input type="radio" name="rating" change=(action (mut rating.rating) '4')}} 4</li>
+
+    <li class='rate-btn text-center'>{{input type="radio" name="rating" change=(action (mut rating.rating) '5')}} 5</li>
+
+    <li class='rate-btn text-center'>(Very helpful)</li>
+  </ul>
+
+  </form>
+<br/>
+<button class='btn btn-danger' {{action 'delRate' video on='click'}}>Delete My Rating</button>

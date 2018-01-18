@@ -4,6 +4,7 @@ export default Ember.Route.extend({
   model () {
     return this.get('store').findAll('video');
   },
+  classNames: ['text-center'],
   message: 'hello',
   auth: Ember.inject.service(),
   rate: Ember.inject.service('userrating'),
