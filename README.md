@@ -1,4 +1,4 @@
-# Shifting Power API
+# Shifting Power Client
 
 ## About
 
