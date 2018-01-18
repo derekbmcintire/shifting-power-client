@@ -47,9 +47,8 @@ export default Ember.Service.extend({
       })
       .then(() => {
         // display successful delete message
-        // this.get('flashMessages')
-        //   .success('Rating successfully deleted.');
-        console.log('good')
+        this.get('flashMessages')
+          .success('Rating successfully deleted.');
       })
       .then(() => {
         setTimeout(() => {
@@ -57,10 +56,9 @@ export default Ember.Service.extend({
         }, 500)
       })
       .catch(() => {
-        console.log('bad')
         // display unsuccessful delete message
-        // this.get('flashMessages')
-        //   .danger('Rating not deleted.');
+        this.get('flashMessages')
+          .danger('Rating not deleted.');
       });
   },
 
@@ -92,18 +90,16 @@ export default Ember.Service.extend({
           .save()
           .then(() => {
             // display success message
-            // this.get('flashMessages')
-            //   .success('Rating successfully created.');
-            console.log('good')
+            this.get('flashMessages')
+              .success('Rating successfully created.');
             })
             .then(() => {
               return this.get('store').findRecord('video', rating.video.id)
             })
             .catch(() => {
               // display failure message
-              // this.get('flashMessages')
-              //   .danger('Rating not created.');
-              console.log('good')
+              this.get('flashMessages')
+                .danger('Rating not created.');
             });
       }
     });
