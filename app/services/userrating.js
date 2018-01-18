@@ -38,26 +38,29 @@ export default Ember.Service.extend({
 
   // action to delete a userrating
   delRate(video) {
+    let self = this
     this.userVideoRating(video)
       .then((result) => {
-        // get the first (only) object in the returned array
-        // delete that record
+        // delete first (only) object returned
         result.get('firstObject').deleteRecord();
         result.get('firstObject').save();
-      }).then(() => {
-        // console.log('rating is ', rating)
-        console.log('rating.get(video.id) is ', video.id)
-        return this.get('store').findRecord('video', video.id)
       })
       .then(() => {
         // display successful delete message
-        this.get('flashMessages')
-          .success('Rating successfully deleted.');
+        // this.get('flashMessages')
+        //   .success('Rating successfully deleted.');
+        console.log('good')
+      })
+      .then(() => {
+        setTimeout(() => {
+          return this.get('store').findRecord('video', video.id)
+        }, 500)
       })
       .catch(() => {
+        console.log('bad')
         // display unsuccessful delete message
-        this.get('flashMessages')
-          .danger('Rating not deleted.');
+        // this.get('flashMessages')
+        //   .danger('Rating not deleted.');
       });
   },
 
@@ -88,18 +91,19 @@ export default Ember.Service.extend({
         result.get('store').createRecord('userrating', rating)
           .save()
           .then(() => {
-            // console.log('rating is ', rating)
-            console.log('rating.get(video.id) is ', rating.video.id)
-            return this.get('store').findRecord('video', rating.video.id)
-          })
-          .then(() => {
             // display success message
-            this.get('flashMessages')
-              .success('Rating successfully created.');
-            }).catch(() => {
+            // this.get('flashMessages')
+            //   .success('Rating successfully created.');
+            console.log('good')
+            })
+            .then(() => {
+              return this.get('store').findRecord('video', rating.video.id)
+            })
+            .catch(() => {
               // display failure message
-              this.get('flashMessages')
-                .danger('Rating not created.');
+              // this.get('flashMessages')
+              //   .danger('Rating not created.');
+              console.log('good')
             });
       }
     });

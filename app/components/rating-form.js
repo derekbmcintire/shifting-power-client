@@ -7,6 +7,12 @@ export default Ember.Component.extend({
     video: null
   },
   actions: {
+    clearForm() {
+      setTimeout(() => {
+        this.set('rating.rating', null)
+      }, 1000)
+
+    },
     // assign the video to the rating object that is passed to
     // create, update and delete and send the action up to the index
     // route template
