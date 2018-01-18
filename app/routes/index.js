@@ -21,15 +21,16 @@ export default Ember.Route.extend({
   doRefresh() {
     this.refresh()
   },
-  delRate(rating) {
-    let self = this
-    let promise = new Ember.RSVP.Promise(function(resolve, reject){
-     resolve(self.get('rate').delRate(rating));
-   });
-   promise.then(() => {
-     console.log('promise resolved')
-     self.refresh()
-   })
+  delRate(video) {
+    this.get('rate').delRate(video);
+   //  let self = this
+   //  let promise = new Ember.RSVP.Promise(function(resolve, reject){
+   //   resolve(self.get('rate').delRate(video));
+   // });
+   // promise.then(() => {
+   //   console.log('promise resolved')
+   //   self.refresh()
+   // })
 
     // setTimeout(()=>{
     //   this.transitionTo('change-password')
