@@ -66,6 +66,7 @@ export default Ember.Service.extend({
           // this result should always be a DS.PromiseArray
           // with only a single object
           // set the new rating for the first (only) object and save
+          console.log(result.get('firstObject'))
           result.get('firstObject').set('rating', rating.rating);
           result.get('firstObject').save()
         .then(() => {

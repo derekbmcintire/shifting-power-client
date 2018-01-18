@@ -5,6 +5,8 @@ export default DS.Model.extend({
   title: DS.attr('string'),
   url: DS.attr('string'),
   ratings: DS.hasMany('userrating'),
+  users: DS.hasMany('user'),
+  rated: DS.attr('boolean'),
   // maps through ratings objects and pulls out the rating property
   // returns an array of integers that represent all of one videos ratings
   numRatings: Ember.computed.mapBy('ratings', 'rating'),
