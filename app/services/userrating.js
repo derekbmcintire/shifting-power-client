@@ -45,10 +45,9 @@ export default Ember.Service.extend({
         result.get('firstObject').deleteRecord();
         result.get('firstObject').save();
       }).then(() => {
-        this.get("routing").transitionTo('change-password');
-
-      }).then(() => {
-        this.get("routing").transitionTo('index');
+        // console.log('rating is ', rating)
+        console.log('rating.get(video.id) is ', rating.video.id)
+        return this.get('store').findRecord('video', rating.video.id)
       })
       .then(() => {
         // display successful delete message
@@ -75,12 +74,6 @@ export default Ember.Service.extend({
           result.get('firstObject').set('rating', rating.rating);
           result.get('firstObject').save()
         .then(() => {
-          this.get("routing").transitionTo('change-password');
-
-          }).then(() => {
-            this.get("routing").transitionTo('index');
-          })
-        .then(() => {
           // display success message
           this.get('flashMessages')
             .success('Rating successfully updated.');
@@ -92,13 +85,13 @@ export default Ember.Service.extend({
         });
       } else {
         // if nothing is returned, create a new record
-        result.get('store').createRecord('userrating', rating).save()
-        .then(() => {
-          this.get("routing").transitionTo('change-password');
-
-        }).then(() => {
-          this.get("routing").transitionTo('index');
-        })
+        result.get('store').createRecord('userrating', rating)
+          .save()
+          .then(() => {
+            // console.log('rating is ', rating)
+            console.log('rating.get(video.id) is ', rating.video.id)
+            return this.get('store').findRecord('video', rating.video.id)
+          })
           .then(() => {
             // display success message
             this.get('flashMessages')
