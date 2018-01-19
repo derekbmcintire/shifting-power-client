@@ -5,6 +5,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   padding-bottom: 25px;
+  text-align: center;
 }
 
 .about-drop {
@@ -59,8 +60,14 @@ body {
   margin-left: 15px;
 }
 
+.btn-secondary {
+  background: transparent;
+  border-radius: 0;
+  margin-bottom: 5px;
+}
+
 .btn-secondary:hover {
-  border: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .cables {
@@ -126,6 +133,16 @@ body {
   padding: 0;
 }
 
+.dropdown-item {
+    margin-bottom: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.dropdown-menu {
+  padding: 10px;
+}
+
 .form-horizontal {
   margin: 0 auto;
   min-width: 400px;
@@ -184,6 +201,12 @@ body {
   margin: 0;
   text-align: center;
   width: 100%;
+}
+
+.my-nav {
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .paddles {
