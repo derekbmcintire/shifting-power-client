@@ -15,6 +15,9 @@ export default Ember.Component.extend({
       // as the first video.
       this.sendAction('getVideo', '11');
     },
+    getVideo(tagId) {
+      this.sendAction('getVideo', tagId)
+    },
     frontWheelVideo() {
       this.sendAction('getVideo', '11');
     },
@@ -48,9 +51,7 @@ export default Ember.Component.extend({
     shiftingVideo() {
       this.sendAction('getVideo', '9');
     },
-    cablesVideo() {
-      this.sendAction('getVideo', '13');
-    },
+
     backWheel() {
       this.set('message', 'Back Wheel');
     },
