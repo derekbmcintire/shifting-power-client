@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Francois+One');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 body {
-  font-family: 'Francois One', sans-serif;
+  font-family: 'Oswald', sans-serif;
   padding-bottom: 25px;
 }
 
@@ -54,6 +55,19 @@ body {
   position: absolute;
   z-index: 5;
   cursor: pointer;
+}
+
+.card-drop {
+  background-color: white;
+  border: 1px solid black;
+  font-size: 18px;
+  letter-spacing: .75px;
+  line-height: 1.5em;
+  margin-left: -250px;
+  margin-right: 25px;
+  padding: 10px;
+  position: fixed;
+  z-index: 99;
 }
 
 .cassette {
@@ -265,6 +279,7 @@ body {
 }
 
 .sp-title {
+  font-family: 'Francois One', sans-serif;
   font-size: 70px;
   -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: #fea921;
