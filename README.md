@@ -8,7 +8,7 @@ A user can navigate the site a few different ways. First, they can click on any 
 
 If a user wants to rate a video, they must sign up and sign in to the application. From there a user can choose a rating based on a one through five scale and see their rating added to the video. A user can choose a different rating if they would like and this will automatically update their previous rating. If a user wants to remove a rating, they can click "Delete My Rating" and their rating will be removed.
 
-(https://c1.staticflickr.com/5/4667/39772208031_2859024c78_b.jpg)
+![screenshot](https://c1.staticflickr.com/5/4667/39772208031_2859024c78_b.jpg)
 
 ## Deployed Sites and GitHub Repositories
 
@@ -28,7 +28,7 @@ If a user wants to rate a video, they must sign up and sign in to the applicatio
 - A user can delete their rating of a video.
 
 ## Wireframe
-(https://c1.staticflickr.com/5/4767/39772216971_12eaa85974_c.jpg)
+![wireframe](https://c1.staticflickr.com/5/4767/39772216971_12eaa85974_c.jpg)
 
 ## Technologies Used
 
