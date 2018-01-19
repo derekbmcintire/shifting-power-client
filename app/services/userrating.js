@@ -27,18 +27,17 @@ export default Ember.Service.extend({
       // set beenRated to boolean T or F to represent if
       // current user has rated the video
       if (result.get('length') > 0) {
-        this.set('beenRated', true)
-        return result
+        this.set('beenRated', true);
+        return result;
       } else {
-        this.set('beenRated', false)
-        return result
+        this.set('beenRated', false);
+        return result;
       }
-    })
+    });
   },
 
   // action to delete a userrating
   delRate(video) {
-    let self = this
     this.userVideoRating(video)
       .then((result) => {
         // delete first (only) object returned
@@ -52,8 +51,8 @@ export default Ember.Service.extend({
       })
       .then(() => {
         setTimeout(() => {
-          return this.get('store').findRecord('video', video.id)
-        }, 500)
+          return this.get('store').findRecord('video', video.id);
+        }, 500);
       })
       .catch(() => {
         // display unsuccessful delete message
@@ -94,7 +93,7 @@ export default Ember.Service.extend({
               .success('Rating successfully created.');
             })
             .then(() => {
-              return this.get('store').findRecord('video', rating.video.id)
+              return this.get('store').findRecord('video', rating.video.id);
             })
             .catch(() => {
               // display failure message

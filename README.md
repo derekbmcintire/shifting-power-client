@@ -8,12 +8,27 @@ A user can navigate the site a few different ways. First, they can click on any 
 
 If a user wants to rate a video, they must sign up and sign in to the application. From there a user can choose a rating based on a one through five scale and see their rating added to the video. A user can choose a different rating if they would like and this will automatically update their previous rating. If a user wants to remove a rating, they can click "Delete My Rating" and their rating will be removed.
 
+(https://c1.staticflickr.com/5/4667/39772208031_2859024c78_b.jpg)
+
 ## Deployed Sites and GitHub Repositories
 
 - [Client GitHub Repository](https://github.com/derekbmcintire/shifting-power-client)
 - [Deployed Client](https://derekbmcintire.github.io/shifting-power-client/)
 - [API GitHub](https://github.com/derekbmcintire/shifting-power-api)
 - [Deployed API](https://shifting-power.herokuapp.com/)
+
+## User Stories
+
+- A user can register as a user, log in, log out and change password.
+- A user can see a list of videos.
+- A user can watch a video.
+- A user can click on an image of a bicycle and see videos related to that part.
+- A user can rate a video.
+- A user can update their rating of a video.
+- A user can delete their rating of a video.
+
+## Wireframe
+(https://c1.staticflickr.com/5/4767/39772216971_12eaa85974_c.jpg)
 
 ## Technologies Used
 
