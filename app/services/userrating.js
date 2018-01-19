@@ -63,6 +63,9 @@ export default Ember.Service.extend({
 
   // action to create or update a userrating
   newRating(rating) {
+    if (rating.rating == null) {
+      this.delRate(rating.video)
+    } else {
     this.userVideoRating(rating.video)
       .then((result) => {
         // check if current user has previously
@@ -103,4 +106,5 @@ export default Ember.Service.extend({
       }
     });
   }
+}
 });

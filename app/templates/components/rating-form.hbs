@@ -3,24 +3,28 @@
   <ul class='radio-list'>
     <li class='rate-label text-center'>(Not helpful)</li>
 
+{{#if video.rated}}
+      <li class='rate-li text-center'>{{input class="rate-btn" type="radio" name="rating" change=(action (mut rating.rating) null)}}<span class='delete-x'>&#10008;</span></li>
+{{/if}}
+
     {{!-- for each radio button call an action on change
     mutate 'rating' to have the value of the second argument
     in this case '1' --}}
-    <li class='rate-li text-center'>{{input class="rate-btn" type="radio" name="rating" change=(action (mut rating.rating) '1')}} 1</li>
+    <li class='rate-li text-center'>{{input class="rate-btn" type="radio" name="rating" change=(action (mut rating.rating) '1')}}1</li>
 
-    <li class='rate-li text-center'>{{input class="rate-btn" type="radio" name="rating" change=(action (mut rating.rating) '2')}} 2</li>
+    <li class='rate-li text-center'>{{input class="rate-btn" type="radio" name="rating" change=(action (mut rating.rating) '2')}}2</li>
 
-    <li class='rate-li text-center'>{{input class="rate-btn" type="radio" name="rating" change=(action (mut rating.rating) '3')}} 3</li>
+    <li class='rate-li text-center'>{{input class="rate-btn" type="radio" name="rating" change=(action (mut rating.rating) '3')}}3</li>
 
-    <li class='rate-li text-center'>{{input class="rate-btn" type="radio" name="rating" change=(action (mut rating.rating) '4')}} 4</li>
+    <li class='rate-li text-center'>{{input class="rate-btn" type="radio" name="rating" change=(action (mut rating.rating) '4')}}4</li>
 
-    <li class='rate-li text-center'>{{input class="rate-btn" type="radio" name="rating" change=(action (mut rating.rating) '5')}} 5</li>
+    <li class='rate-li text-center'>{{input class="rate-btn" type="radio" name="rating" change=(action (mut rating.rating) '5')}}5</li>
 
     <li class='rate-label text-center'>(Very helpful)</li>
   </ul>
 
   </form>
 <br/>
-{{#if video.rated}}
+{{!-- {{#if video.rated}}
 <button class='btn btn-danger' {{action 'delRate' video on='click'}}>Delete My Rating</button>
-{{/if}}
+{{/if}} --}}
