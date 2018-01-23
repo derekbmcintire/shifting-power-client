@@ -1,4 +1,5 @@
 <h3>Click a part of the bicycle to learn more!</h3>
+<h3 class='message'>{{message}}</h3>
 <div class='bike-wrap'>
   {{!-- each div represents a bicycle part and displays the name of that part
   on hover, and calls an action to show related videos when clicked --}}
@@ -83,4 +84,3 @@
     {{action 'resetMessage' on='mouseLeave'}}
     {{action 'frontWheelVideo'}}></div>
 </div>
-<h3 class='message'>{{message}}</h3>
