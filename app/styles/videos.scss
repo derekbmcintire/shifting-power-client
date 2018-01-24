@@ -50,6 +50,70 @@ body {
   text-align: left;
 }
 
+.part-container {
+  height: 100%;
+}
+
+.wheel-bg {
+  background-image: url('https://c1.staticflickr.com/5/4649/26002281118_c649e877ba_o.png');
+}
+
+.brake-bg {
+    background-image: url('https://c1.staticflickr.com/5/4651/25004523507_97b69aa2f3_o.png');
+}
+
+.bb-bg {
+  background-image: url('https://c1.staticflickr.com/5/4651/39166512364_6e7b3642b3_o.png');
+}
+
+.cassette-bg {
+  background-image: url('https://c1.staticflickr.com/5/4714/25004522237_894177bdb5_o.png');
+}
+
+.chain-bg {
+    background-image: url('https://c1.staticflickr.com/5/4770/25004521547_f480ab5433_o.png');
+}
+
+.crank-bg {
+  background-image: url('https://c1.staticflickr.com/5/4717/39165478114_0860eea345_o.png');
+}
+
+.cable-bg {
+  background-image: url('https://c1.staticflickr.com/5/4704/39165478744_1d45fffef7_o.png');
+}
+
+.empty-bg {
+  background-image: url('https://c1.staticflickr.com/5/4746/25005680097_542ddbc9ff_o.png');
+}
+
+.front-der-bg {
+    background-image: url('https://c1.staticflickr.com/5/4619/25004522507_d6f23d041a_o.png');
+}
+
+.headset-bg {
+    background-image: url('https://c1.staticflickr.com/5/4755/39165477424_7f89463413_o.png');
+}
+
+.hub-bg {
+    background-image: url('https://c1.staticflickr.com/5/4607/25004521267_6eb6bf95fb_o.png');
+}
+
+.lever-bg {
+    background-image: url('https://c1.staticflickr.com/5/4652/39165478964_a93ee610d9_o.png');
+}
+
+.paddle-bg {
+    background-image: url('https://c1.staticflickr.com/5/4713/25004521017_b3a054371a_o.png');
+}
+
+.pedal-bg {
+  background-image: url('https://c1.staticflickr.com/5/4744/39165478414_d1158ff061_o.png');
+}
+
+.rear-der-bg {
+    background-image: url('https://c1.staticflickr.com/5/4741/25004520437_650c6c8e4b_o.png');
+}
+
 .brakes {
   display: inline-block;
   position: absolute;
@@ -203,7 +267,7 @@ body {
   margin: 0;
   text-align: center;
   width: 100%;
-
+  position: absolute;
 }
 
 .my-nav {

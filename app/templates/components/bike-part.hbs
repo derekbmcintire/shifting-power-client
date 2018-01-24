@@ -1,86 +1,85 @@
-<h3>Click a part of the bicycle to learn more!</h3>
 <h3 class='message'>{{message}}</h3>
-<div class='bike-wrap'>
+<div class='part-container'>
   {{!-- each div represents a bicycle part and displays the name of that part
   on hover, and calls an action to show related videos when clicked --}}
 <div class='cables seat-tube-cables'
-    {{action 'cables' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'cableBg' 'Cables' on='mouseEnter'}}
+    {{action 'onHover' 'cableBg' '' on='mouseLeave'}}
     {{action 'getVideo' '13'}}></div>
 <div class='cables top-cables'
-    {{action 'cables' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'cableBg' 'Cables' on='mouseEnter'}}
+    {{action 'onHover' 'cableBg' '' on='mouseLeave'}}
     {{action 'getVideo' '13'}}></div>
 <div class='brakes levers' id='levers'
-    {{action 'levers' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'leverBg' 'Brake Levers' on='mouseEnter'}}
+    {{action 'onHover' 'leverBg' '' on='mouseLeave'}}
     {{action 'brakesVideo' '12'}}></div>
 <div class='shifting paddles' id='paddles'
-    {{action 'paddles' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'paddleBg' 'Shifters' on='mouseEnter'}}
+    {{action 'onHover' 'paddleBg' '' on='mouseLeave'}}
     {{action 'shiftingVideo'}}></div>
 <div class='bearings headset' id='headset'
-    {{action 'headset' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'headsetBg' 'Headset' on='mouseEnter'}}
+    {{action 'onHover' 'headsetBg' '' on='mouseLeave'}}
     {{action 'headsetVideo'}}></div>
 <div class='bearings bb' id='bb'
-    {{action 'bottomBracket' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'bbBg' 'Bottom Bracket' on='mouseEnter'}}
+    {{action 'onHover' 'bbBg' '' on='mouseLeave'}}
     {{action 'bbVideo'}}></div>
 <div class='brakes rear-brake' id='rear-brake'
-    {{action 'rearBrake' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'brakeBg' 'Rear Brake' on='mouseEnter'}}
+    {{action 'onHover' 'brakeBg' '' on='mouseLeave'}}
     {{action 'brakesVideo'}}></div>
 <div class='brakes front-brake' id='front-brake'
-    {{action 'frontBrake' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'brakeBg' 'Front Brake' on='mouseEnter'}}
+    {{action 'onHover' 'brakeBg' '' on='mouseLeave'}}
     {{action 'brakesVideo'}}></div>
 <div class='bearings rear-hub' id='rear-hub'
-    {{action 'rearHub' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'hubBg' 'Rear Hub' on='mouseEnter'}}
+    {{action 'onHover' 'hubBg' '' on='mouseLeave'}}
     {{action 'hubVideo'}}></div>
 <div class='bearings front-hub' id='front-hub'
-    {{action 'frontHub' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'hubBg' 'Front Hub' on='mouseEnter'}}
+    {{action 'onHover' 'hubBg' '' on='mouseLeave'}}
     {{action 'hubVideo'}}></div>
 <div class='shifting rear-der' id='rear-der'
-    {{action 'rearDer' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'rearDerBg' 'Rear Derailleur' on='mouseEnter'}}
+    {{action 'onHover' 'rearDerBg' '' on='mouseLeave'}}
     {{action 'rearDerVideo'}}></div>
 <div class='shifting front-der' id='front-der'
-    {{action 'frontDer' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'frontDerBg' 'Front Derailleur' on='mouseEnter'}}
+    {{action 'onHover' 'frontDerBg' '' on='mouseLeave'}}
     {{action 'frontDerVideo'}}></div>
 <div class='shifting chain-top' id='chain-top'
-    {{action 'chain' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'chainBg' 'Chain' on='mouseEnter'}}
+    {{action 'onHover' 'chainBg' '' on='mouseLeave'}}
     {{action 'chainVideo'}}></div>
 <div class='shifting chain-bottom' id='chain-bottom'
-    {{action 'chain' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'chainBg' 'Chain' on='mouseEnter'}}
+    {{action 'onHover' 'chainBg' '' on='mouseLeave'}}
     {{action 'chainVideo'}}></div>
 <div class='drivetrain pedals' id='pedals'
-    {{action 'pedals' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'pedalBg' 'Pedals' on='mouseEnter'}}
+    {{action 'onHover' 'pedalBg' '' on='mouseLeave'}}
     {{action 'cranksVideo'}}></div>
 <div class='drivetrain cranks crankarm' id='crankarm'
-    {{action 'cranks' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'crankBg' 'Cranks' on='mouseEnter'}}
+    {{action 'onHover' 'crankBg' '' on='mouseLeave'}}
     {{action 'cranksVideo'}}></div>
 <div class='drivetrain cranks chainring' id='chainring'
-    {{action 'cranks' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'crankBg' 'Cranks' on='mouseEnter'}}
+    {{action 'onHover' 'crankBg' '' on='mouseLeave'}}
     {{action 'cranksVideo'}}></div>
 <div class='drivetrain cassette'
-    {{action 'cassette' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'cassetteBg' 'Freewheel/Cassette' on='mouseEnter'}}
+    {{action 'onHover' 'cassetteBg' '' on='mouseLeave'}}
     {{action 'cassetteVideo'}}></div>
 <div class='wheel back-wheel' id='back-wheel'
-    {{action 'backWheel' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'wheelBg' 'Wheels' on='mouseEnter'}}
+    {{action 'onHover' 'wheelBg' '' on='mouseLeave'}}
     {{action 'backWheelVideo'}}></div>
 <div class='wheel front-wheel' id='front-wheel'
-    {{action 'frontWheel' on='mouseEnter'}}
-    {{action 'resetMessage' on='mouseLeave'}}
+    {{action 'onHover' 'wheelBg' 'Wheels' on='mouseEnter'}}
+    {{action 'onHover' 'wheelBg' '' on='mouseLeave'}}
     {{action 'frontWheelVideo'}}></div>
 </div>

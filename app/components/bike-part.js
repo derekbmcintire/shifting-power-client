@@ -2,7 +2,28 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   message: '',
+  classNames: ['bike-wrap'],
+  classNameBindings: ['wheelBg', 'crankBg', 'cableBg', 'leverBg', 'paddleBg', 'headsetBg', 'brakeBg', 'hubBg', 'rearDerBg', 'frontDerBg', 'chainBg', 'pedalBg', 'cassetteBg', 'bbBg', 'emptyBg'],
+  wheelBg: false,
+  crankBg: false,
+  cableBg: false,
+  leverBg: false,
+  paddleBg: false,
+  headsetBg: false,
+  brakeBg: false,
+  hubBg: false,
+  rearDerBg: false,
+  frontDerBg: false,
+  chainBg: false,
+  pedalBg: false,
+  cassetteBg: false,
+  bbBg: false,
+  emptyBg: false,
   actions: {
+    onHover(name, msg) {
+      this.toggleProperty(name)
+      this.set('message', msg);
+    },
     backWheelVideo() {
       // this sends an action called getVideo up to the bike-video-container
       // template and passes '11' as an argument.
