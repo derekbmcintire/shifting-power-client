@@ -1,4 +1,7 @@
 <h3 class='message'>{{message}}</h3>
+<div class='empty'
+    {{action 'onHover' 'emptyBg' '' on='mouseEnter'}}
+    {{action 'onHover' 'emptyBg' '' on='mouseLeave'}}></div>
 <div class='part-container'>
   {{!-- each div represents a bicycle part and displays the name of that part
   on hover, and calls an action to show related videos when clicked --}}

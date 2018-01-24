@@ -50,8 +50,10 @@ body {
   text-align: left;
 }
 
-.part-container {
+.empty {
   height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .wheel-bg {
