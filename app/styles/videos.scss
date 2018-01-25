@@ -50,6 +50,22 @@ body {
   text-align: left;
 }
 
+#preload-01 { background: url(https://c1.staticflickr.com/5/4668/39172704084_588cb5aba3_o.png) no-repeat -9999px -9999px; }
+#preload-02 { background: url(https://c1.staticflickr.com/5/4715/25011672407_425d2c562c_o.png) no-repeat -9999px -9999px; }
+#preload-03 { background: url(https://c1.staticflickr.com/5/4612/39172703674_e8935c9b90_o.png) no-repeat -9999px -9999px; }
+#preload-04 { background: url(https://c1.staticflickr.com/5/4665/25011671377_916e3dbf67_o.png) no-repeat -9999px -9999px; }
+#preload-05 { background: url(https://c1.staticflickr.com/5/4753/25011671127_2fbd3537e9_o.png) no-repeat -9999px -9999px; }
+#preload-06 { background: url(https://c1.staticflickr.com/5/4694/25011672247_81faec5043_o.png) no-repeat -9999px -9999px; }
+#preload-07 { background: url(https://c1.staticflickr.com/5/4746/25005680097_542ddbc9ff_o.png) no-repeat -9999px -9999px; }
+#preload-08 { background: url(https://c1.staticflickr.com/5/4677/25011670857_436b2623c8_o.png) no-repeat -9999px -9999px; }
+#preload-09 { background: url(https://c1.staticflickr.com/5/4741/25011670757_f911eaeb38_o.png) no-repeat -9999px -9999px; }
+#preload-10 { background: url(https://c1.staticflickr.com/5/4744/25011670657_83b4ef17dd_o.png) no-repeat -9999px -9999px; }
+#preload-11 { background: url(https://c1.staticflickr.com/5/4613/25011670517_38deeb981a_o.png) no-repeat -9999px -9999px; }
+#preload-12 { background: url(https://c1.staticflickr.com/5/4705/25011672057_c4a25b81fe_o.png) no-repeat -9999px -9999px; }
+#preload-13 { background: url(https://c1.staticflickr.com/5/4626/39172703294_bcc4039542_o.png) no-repeat -9999px -9999px; }
+#preload-14 { background: url(https://c1.staticflickr.com/5/4649/26002281118_c649e877ba_o.png) no-repeat -9999px -9999px; }
+#preload-15 { background: url(https://c1.staticflickr.com/5/4758/25011671757_6108b878be_o.png) no-repeat -9999px -9999px; }
+
 .empty {
   height: 100%;
   width: 100%;
@@ -108,12 +124,12 @@ body {
   background-image: url('https://c1.staticflickr.com/5/4626/39172703294_bcc4039542_o.png');
 }
 
-.wheel-bg {
-  background-image: url('https://c1.staticflickr.com/5/4649/26002281118_c649e877ba_o.png');
-}
-
 .rear-der-bg {
     background-image: url('https://c1.staticflickr.com/5/4758/25011671757_6108b878be_o.png');
+}
+
+.wheel-bg {
+  background-image: url('https://c1.staticflickr.com/5/4649/26002281118_c649e877ba_o.png');
 }
 
 .brakes {
