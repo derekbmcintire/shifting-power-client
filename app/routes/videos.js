@@ -9,9 +9,14 @@ export default Ember.Route.extend({
   user: Ember.computed.alias('auth.credentials.id'),
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
   actions: {
+    // accesses the userrating service delRate function
+    // deletes an existing userrating
     delRate(rating) {
       this.get('rate').delRate(rating);
     },
+    // accesses the userrating service newRating function
+    // updates an existing userrating, OR if a user has not already
+    // rated the video, creates a new userrating
     newRating(rating) {
       this.get('rate').newRating(rating);
     }

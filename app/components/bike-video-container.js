@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  featuredUrl: '',
   classNames: ['text-center'],
   actions: {
     // send the getVideo action to the index route template
@@ -9,5 +8,4 @@ export default Ember.Component.extend({
       this.sendAction('getVideo', tagId);
     }
   }
-
 });

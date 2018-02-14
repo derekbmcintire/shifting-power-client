@@ -1,9 +1,13 @@
 
 <h4>{{video.title}} </h4>
 
+{{!-- displays video --}}
 <iframe class='video-wheel' width="426" height="240" src={{video.url}} frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
+{{!-- if video has a length property, which represents the number of ratings
+a video has --}}
 {{#if video.length}}
+  {{!-- if the video has only a single rating --}}
   {{#if video.one}}
     <h5>Average Rating: {{video.avg}}/5 Rated by {{video.length}} user.</h5>
   {{else}}
@@ -13,8 +17,7 @@
   <h5>This video has not been rated</h5>
 {{/if}}
 
-<h4>{{message}}</h4>
-
+{{!-- displays the rating form if current user is signed in --}}
 {{#if isAuthenticated}}
   {{rating-form video=video change='change' delRate='delRate'}}
 {{/if}}

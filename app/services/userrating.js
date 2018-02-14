@@ -50,6 +50,11 @@ export default Ember.Service.extend({
           .success('Rating successfully deleted.');
       })
       .then(() => {
+        // this makes the delete radio button disappear after half a second
+        // Ember does not provide a way to set checked or unchecked state
+        // of a radio button, so there is no way to clear an ember
+        // radio button helper without adding a dependency
+        // in the future something like https://www.npmjs.com/package/ember-radio-buttons could be used
         setTimeout(() => {
           return this.get('store').findRecord('video', video.id);
         }, 500);
