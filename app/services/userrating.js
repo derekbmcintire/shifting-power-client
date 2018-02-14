@@ -69,7 +69,7 @@ export default Ember.Service.extend({
   // action to create or update a userrating
   newRating(rating) {
     if (rating.rating == null) {
-      this.delRate(rating.video)
+      this.delRate(rating.video);
     } else {
     this.userVideoRating(rating.video)
       .then((result) => {

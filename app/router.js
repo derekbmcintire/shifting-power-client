@@ -12,7 +12,7 @@ Router.map(function () {
   this.route('users');
   this.route('videos', {path: '/results/:tag_id'});
   this.route('video', { path: '/videos/:video_id'});
-  this.route('index', {path: '/'})
+  this.route('index', {path: '/'});
 });
 
 export default Router;

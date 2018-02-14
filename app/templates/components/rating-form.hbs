@@ -4,9 +4,9 @@
     <li class='rate-label text-center'>(Not helpful)</li>
 
 {{#if video.rated}}
-      <li class='rate-li text-center'>{{input class="rate-btn" type="radio" name="rating" change=(action (mut rating.rating) null)}}<span class='delete-x'>&#10008;</span></li>
+    {{!-- delete button --}}
+    <li class='rate-li text-center'>{{input class="rate-btn" type="radio" name="rating" change=(action (mut rating.rating) null)}}<span class='delete-x'>&#10008;</span></li>
 {{/if}}
-
     {{!-- for each radio button call an action on change
     mutate 'rating' to have the value of the second argument
     in this case '1' --}}
@@ -25,6 +25,3 @@
 
   </form>
 <br/>
-{{!-- {{#if video.rated}}
-<button class='btn btn-danger' {{action 'delRate' video on='click'}}>Delete My Rating</button>
-{{/if}} --}}

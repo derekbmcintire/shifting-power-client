@@ -24,7 +24,7 @@ export default Ember.Component.extend({
   actions: {
     // toggles passed class and displays bike part name in message element
     onHover(name, msg) {
-      this.toggleProperty(name)
+      this.toggleProperty(name);
       this.set('message', msg);
     },
     // sends action getVideo up to bike-video-container component
@@ -37,7 +37,7 @@ export default Ember.Component.extend({
     // related to the part that was clicked on should be displayed
     // as the first video.
     getVideo(tagId) {
-      this.sendAction('getVideo', tagId)
+      this.sendAction('getVideo', tagId);
     }
   }
 });
